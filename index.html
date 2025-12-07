@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pranshu Chaurasia | Data Scientist & LLM Engineer</title>
-    <meta name="description" content="Data Scientist specializing in Document Intelligence, Large Language Models, and RAG Systems. Building robust AI solutions.">
-    <meta name="keywords" content="Data Scientist, LLM, RAG, Document AI, Machine Learning, Python">
+    <title>Pranshu Chaurasia | Data Scientist & AI Researcher</title>
+    <meta name="description"
+        content="Data Scientist specializing in Document Intelligence, LLMs, and Responsible AI at Société Générale. 4+ years of experience building production AI systems.">
+    <meta name="keywords"
+        content="Data Scientist, LLM, RAG, Document AI, Machine Learning, AI Research, Société Générale">
     <meta name="author" content="Pranshu Chaurasia">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
     <style>
         :root {
             --bg-primary: #0a0a0f;
@@ -24,6 +29,7 @@
             --border-color: rgba(255, 255, 255, 0.08);
             --gradient-1: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #d946ef 100%);
             --gradient-2: linear-gradient(135deg, #0ea5e9 0%, #6366f1 100%);
+            --success: #22c55e;
         }
 
         * {
@@ -62,7 +68,7 @@
             height: 600px;
             border-radius: 50%;
             filter: blur(120px);
-            opacity: 0.15;
+            opacity: 0.12;
             pointer-events: none;
             z-index: -1;
         }
@@ -165,7 +171,7 @@
             transition: all 0.3s ease;
         }
 
-        /* Hero Section */
+        /* Hero */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -195,21 +201,28 @@
         .hero-badge .dot {
             width: 8px;
             height: 8px;
-            background: #22c55e;
+            background: var(--success);
             border-radius: 50%;
             animation: pulse 2s infinite;
         }
 
         @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.5;
+            }
         }
 
         .hero h1 {
-            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-size: clamp(2.5rem, 6vw, 3.75rem);
             font-weight: 700;
             line-height: 1.1;
-            margin-bottom: 24px;
+            margin-bottom: 16px;
             animation: fadeInUp 0.6s ease 0.1s backwards;
         }
 
@@ -220,12 +233,46 @@
             background-clip: text;
         }
 
+        .hero-role {
+            font-size: 1.35rem;
+            color: var(--accent-secondary);
+            margin-bottom: 20px;
+            animation: fadeInUp 0.6s ease 0.15s backwards;
+            font-weight: 500;
+        }
+
         .hero-description {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             color: var(--text-secondary);
             margin-bottom: 40px;
             max-width: 600px;
             animation: fadeInUp 0.6s ease 0.2s backwards;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 40px;
+            animation: fadeInUp 0.6s ease 0.25s backwards;
+        }
+
+        .hero-stat {
+            text-align: left;
+        }
+
+        .hero-stat-value {
+            font-size: 2rem;
+            font-weight: 700;
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-stat-label {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .hero-cta {
@@ -341,16 +388,12 @@
             margin: 0 auto;
         }
 
-        /* About Section */
+        /* About */
         .about-content {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr 1.2fr;
             gap: 64px;
             align-items: center;
-        }
-
-        .about-image {
-            position: relative;
         }
 
         .about-image-wrapper {
@@ -358,129 +401,214 @@
             border-radius: 24px;
             overflow: hidden;
             background: var(--gradient-1);
-            padding: 4px;
+            padding: 3px;
         }
 
         .about-image-inner {
             background: var(--bg-secondary);
-            border-radius: 20px;
+            border-radius: 22px;
             padding: 40px;
             display: flex;
             align-items: center;
             justify-content: center;
-            min-height: 400px;
+            min-height: 380px;
         }
 
         .about-avatar {
-            width: 200px;
-            height: 200px;
+            width: 180px;
+            height: 180px;
             border-radius: 50%;
             background: var(--gradient-1);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 4rem;
+            font-size: 3.5rem;
             font-weight: 700;
             color: white;
         }
 
         .about-text h3 {
-            font-size: 1.75rem;
+            font-size: 1.5rem;
             margin-bottom: 20px;
         }
 
         .about-text p {
             color: var(--text-secondary);
             margin-bottom: 16px;
+            font-size: 1.05rem;
         }
 
-        .focus-list {
-            list-style: none;
+        .about-highlights {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
             margin-top: 24px;
         }
 
-        .focus-list li {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            padding: 12px 0;
-            color: var(--text-secondary);
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .focus-list li:last-child {
-            border-bottom: none;
-        }
-
-        .focus-list .icon {
-            width: 32px;
-            height: 32px;
-            background: rgba(99, 102, 241, 0.1);
+        .highlight-tag {
+            padding: 8px 16px;
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border-color);
             border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1rem;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
         }
 
-        /* Skills Section */
+        /* Experience */
+        .timeline {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--border-color);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 40px;
+            padding-bottom: 48px;
+        }
+
+        .timeline-item:last-child {
+            padding-bottom: 0;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: -6px;
+            top: 8px;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: var(--accent-primary);
+            border: 3px solid var(--bg-primary);
+        }
+
+        .timeline-item.current .timeline-dot {
+            background: var(--success);
+            box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.2);
+        }
+
+        .timeline-header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+
+        .timeline-role {
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+
+        .timeline-company {
+            color: var(--accent-secondary);
+            font-weight: 500;
+        }
+
+        .timeline-period {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            background: var(--bg-tertiary);
+            padding: 4px 12px;
+            border-radius: 20px;
+        }
+
+        .timeline-description {
+            color: var(--text-secondary);
+        }
+
+        .timeline-projects {
+            margin-top: 16px;
+        }
+
+        .timeline-project {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 12px;
+        }
+
+        .timeline-project h4 {
+            font-size: 1rem;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+
+        .timeline-project p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin: 0;
+        }
+
+        /* Skills */
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 24px;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
         }
 
         .skill-card {
             background: var(--bg-secondary);
             border: 1px solid var(--border-color);
-            border-radius: 20px;
-            padding: 32px;
+            border-radius: 16px;
+            padding: 28px;
             transition: all 0.3s ease;
         }
 
         .skill-card:hover {
             transform: translateY(-4px);
             border-color: var(--accent-primary);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
         }
 
         .skill-icon {
-            width: 56px;
-            height: 56px;
+            width: 48px;
+            height: 48px;
             background: var(--gradient-1);
-            border-radius: 16px;
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
-            margin-bottom: 20px;
+            font-size: 1.25rem;
+            margin-bottom: 16px;
         }
 
         .skill-card h3 {
-            font-size: 1.25rem;
-            margin-bottom: 16px;
+            font-size: 1.1rem;
+            margin-bottom: 12px;
         }
 
         .skill-tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
+            gap: 6px;
         }
 
         .skill-tag {
-            padding: 6px 12px;
+            padding: 4px 10px;
             background: var(--bg-tertiary);
-            border-radius: 8px;
-            font-size: 0.85rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
             color: var(--text-secondary);
             font-family: 'JetBrains Mono', monospace;
         }
 
-        /* Projects Section */
+        /* Projects */
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 32px;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 28px;
         }
 
         .project-card {
@@ -497,59 +625,59 @@
             box-shadow: 0 24px 48px rgba(0, 0, 0, 0.3);
         }
 
+        .project-card.featured {
+            grid-column: span 2;
+        }
+
         .project-image {
-            height: 200px;
+            height: 180px;
             background: linear-gradient(135deg, var(--bg-tertiary) 0%, var(--bg-primary) 100%);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 4rem;
+            font-size: 3.5rem;
             border-bottom: 1px solid var(--border-color);
         }
 
         .project-content {
-            padding: 28px;
+            padding: 24px;
         }
 
         .project-content h3 {
-            font-size: 1.25rem;
-            margin-bottom: 12px;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
         }
 
         .project-content p {
             color: var(--text-secondary);
-            font-size: 0.95rem;
-            margin-bottom: 20px;
+            font-size: 0.9rem;
+            margin-bottom: 16px;
         }
 
         .project-tech {
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
-            margin-bottom: 20px;
+            gap: 6px;
+            margin-bottom: 16px;
         }
 
         .project-tech span {
             padding: 4px 10px;
             background: rgba(99, 102, 241, 0.1);
             border-radius: 6px;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             color: var(--accent-secondary);
             font-family: 'JetBrains Mono', monospace;
         }
 
-        .project-links {
-            display: flex;
-            gap: 12px;
-        }
-
         .project-link {
-            display: flex;
+            display: inline-flex;
             align-items: center;
             gap: 6px;
-            color: var(--text-secondary);
+            color: var(--accent-secondary);
             text-decoration: none;
             font-size: 0.9rem;
+            font-weight: 500;
             transition: color 0.3s ease;
         }
 
@@ -558,11 +686,83 @@
         }
 
         .project-link svg {
-            width: 18px;
-            height: 18px;
+            width: 16px;
+            height: 16px;
         }
 
-        /* Contact Section */
+        /* Publications */
+        .publications-list {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .publication-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 28px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .publication-card:hover {
+            border-color: var(--accent-primary);
+        }
+
+        .publication-venue {
+            display: inline-block;
+            padding: 4px 12px;
+            background: rgba(99, 102, 241, 0.15);
+            border-radius: 6px;
+            font-size: 0.8rem;
+            color: var(--accent-secondary);
+            font-weight: 500;
+            margin-bottom: 12px;
+        }
+
+        .publication-title {
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .publication-authors {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 12px;
+        }
+
+        .publication-abstract {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .publication-links {
+            display: flex;
+            gap: 12px;
+            margin-top: 16px;
+        }
+
+        .pub-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 16px;
+            background: var(--bg-tertiary);
+            border-radius: 8px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: all 0.3s ease;
+        }
+
+        .pub-link:hover {
+            background: var(--accent-primary);
+            color: white;
+        }
+
+        /* Contact */
         .contact-wrapper {
             max-width: 700px;
             margin: 0 auto;
@@ -593,6 +793,12 @@
             flex-wrap: wrap;
         }
 
+        .contact-email {
+            font-size: 1.1rem;
+            color: var(--accent-secondary);
+            margin-bottom: 24px;
+        }
+
         /* Footer */
         footer {
             padding: 40px 0;
@@ -615,6 +821,7 @@
                 opacity: 0;
                 transform: translateY(30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -639,8 +846,13 @@
                 gap: 48px;
             }
 
-            .about-image {
-                order: -1;
+            .about-image-wrapper {
+                max-width: 320px;
+                margin: 0 auto;
+            }
+
+            .project-card.featured {
+                grid-column: span 1;
             }
         }
 
@@ -667,11 +879,15 @@
             }
 
             .hero h1 {
-                font-size: 2.25rem;
+                font-size: 2rem;
             }
 
-            .hero-description {
-                font-size: 1rem;
+            .hero-stats {
+                gap: 24px;
+            }
+
+            .hero-stat-value {
+                font-size: 1.5rem;
             }
 
             .projects-grid {
@@ -682,268 +898,358 @@
                 padding: 60px 0;
             }
 
+            .timeline::before {
+                left: 6px;
+            }
+
+            .timeline-item {
+                padding-left: 32px;
+            }
+
+            .timeline-dot {
+                left: 0;
+            }
+
             .contact-card {
                 padding: 32px 24px;
             }
         }
     </style>
 </head>
+
 <body>
     <div class="noise-overlay"></div>
     <div class="glow-orb glow-orb-1"></div>
     <div class="glow-orb glow-orb-2"></div>
 
-    <!-- Navigation -->
     <nav>
         <div class="container">
             <a href="#" class="logo">PC</a>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span></span><span></span><span></span>
             </button>
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section class="hero" id="hero">
         <div class="container">
             <div class="hero-content">
-                <div class="hero-badge">
-                    <span class="dot"></span>
-                    Available for opportunities
+                <div class="hero-badge"><span class="dot"></span>Open to Research Opportunities</div>
+                <h1>Hi, I'm <span class="gradient-text">Pranshu Chaurasia</span></h1>
+                <p class="hero-role">Data Scientist — Responsible & Applied AI Research @ Société Générale</p>
+                <p class="hero-description">Specializing in <strong>Document Intelligence</strong> and <strong>Large
+                        Language Models</strong>. Building end-to-end AI solutions for complex document processing, RAG
+                    systems, and information retrieval at scale.</p>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <div class="hero-stat-value">4+</div>
+                        <div class="hero-stat-label">Years Experience</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-value">2</div>
+                        <div class="hero-stat-label">IEEE Publications</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-value">5+</div>
+                        <div class="hero-stat-label">Production AI Systems</div>
+                    </div>
                 </div>
-                <h1>Hey, I'm <span class="gradient-text">Pranshu Chaurasia</span></h1>
-                <p class="hero-description">
-                    Data Scientist specializing in <strong>Document Intelligence</strong> and <strong>Large Language Models</strong>. 
-                    Building robust AI pipelines and efficient information retrieval systems.
-                </p>
                 <div class="hero-cta">
-                    <a href="#projects" class="btn btn-primary">
-                        View My Work
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-                    </a>
+                    <a href="#projects" class="btn btn-primary">View My Work <svg xmlns="http://www.w3.org/2000/svg"
+                            width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12h14" />
+                            <path d="m12 5 7 7-7 7" />
+                        </svg></a>
                     <a href="#contact" class="btn btn-secondary">Get in Touch</a>
                 </div>
                 <div class="social-links">
-                    <a href="https://github.com/pranshuchaurasia" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                    </a>
-                    <a href="https://linkedin.com/in/pranshuchaurasia" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                    </a>
-                    <a href="https://orcid.org/0000-0001-9061-2470" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="ORCID">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-4.14 18.158h-1.49v-8.295h1.49v8.295zm-.745-9.423c-.498 0-.901-.406-.901-.908s.403-.908.901-.908c.499 0 .902.406.902.908s-.403.908-.902.908zm8.885 9.423h-1.489v-4.04c0-.964-.015-2.203-1.342-2.203-1.344 0-1.55 1.05-1.55 2.134v4.109h-1.489v-8.295h1.43v1.134h.021c.199-.377.686-1.134 1.766-1.134 1.888 0 2.236 1.244 2.236 2.863v5.432z"/></svg>
-                    </a>
+                    <a href="https://github.com/pranshuchaurasia" target="_blank" rel="noopener noreferrer"
+                        class="social-link" aria-label="GitHub"><svg xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg></a>
+                    <a href="https://linkedin.com/in/pranshuchaurasia" target="_blank" rel="noopener noreferrer"
+                        class="social-link" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                        </svg></a>
+                    <a href="https://orcid.org/0000-0001-9061-2470" target="_blank" rel="noopener noreferrer"
+                        class="social-link" aria-label="ORCID"><svg xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-4.14 18.158h-1.49v-8.295h1.49v8.295zm-.745-9.423c-.498 0-.901-.406-.901-.908s.403-.908.901-.908c.499 0 .902.406.902.908s-.403.908-.902.908zm8.885 9.423h-1.489v-4.04c0-.964-.015-2.203-1.342-2.203-1.344 0-1.55 1.05-1.55 2.134v4.109h-1.489v-8.295h1.43v1.134h.021c.199-.377.686-1.134 1.766-1.134 1.888 0 2.236 1.244 2.236 2.863v5.432z" />
+                        </svg></a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
     <section id="about">
         <div class="container">
-            <div class="section-header fade-in">
-                <span class="section-label">About</span>
+            <div class="section-header fade-in"><span class="section-label">About</span>
                 <h2 class="section-title">Who I Am</h2>
             </div>
             <div class="about-content">
-                <div class="about-image fade-in">
-                    <div class="about-image-wrapper">
-                        <div class="about-image-inner">
-                            <div class="about-avatar">PC</div>
-                        </div>
+                <div class="about-image-wrapper fade-in">
+                    <div class="about-image-inner">
+                        <div class="about-avatar">PC</div>
                     </div>
                 </div>
                 <div class="about-text fade-in">
-                    <h3>Data Scientist & LLM Engineer</h3>
-                    <p>I'm a Data Scientist specializing in Document Intelligence and Large Language Models. My work focuses on building robust document processing pipelines and developing efficient information retrieval systems.</p>
-                    <p>I'm particularly passionate about pushing the boundaries of AI in document understanding and creating intelligent systems that can reason and retrieve information effectively.</p>
-                    <ul class="focus-list">
-                        <li><span class="icon">📄</span> Document AI and multimodal transformers</li>
-                        <li><span class="icon">🔍</span> Information retrieval and indexing systems</li>
-                        <li><span class="icon">🤖</span> LLM reasoning and Chain of Thought approaches</li>
-                        <li><span class="icon">🌱</span> Exploring new architectures in RAG design patterns</li>
-                    </ul>
+                    <h3>Data Scientist & AI Researcher</h3>
+                    <p>I'm a Data Scientist at <strong>Société Générale's AI Center of Excellence</strong>, specializing
+                        in Document Intelligence and Large Language Models. With 4+ years of experience, I build
+                        end-to-end production systems for complex document processing and NLP challenges.</p>
+                    <p>My core expertise spans <strong>Document Intelligence</strong>, <strong>RAG
+                            architectures</strong>, and <strong>Information Retrieval systems</strong>. Currently
+                        exploring advances in reasoning models and multimodal AI for enhanced document understanding.
+                    </p>
+                    <p>Passionate about pushing boundaries in AI research and open to collaborating with professionals
+                        interested in LLMs, responsible AI, and scientific research.</p>
+                    <div class="about-highlights">
+                        <span class="highlight-tag">🎯 Document AI</span>
+                        <span class="highlight-tag">🤖 LLM Reasoning</span>
+                        <span class="highlight-tag">🔍 RAG Systems</span>
+                        <span class="highlight-tag">📊 Information Retrieval</span>
+                        <span class="highlight-tag">🔬 AI Research</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
+    <section id="experience">
+        <div class="container">
+            <div class="section-header fade-in"><span class="section-label">Experience</span>
+                <h2 class="section-title">Career Journey</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item current fade-in">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-header">
+                        <div><span class="timeline-role">Data Scientist</span> — <span class="timeline-company">SocGen
+                                AI (Responsible & Applied AI Research)</span></div>
+                        <span class="timeline-period">Feb 2025 – Present</span>
+                    </div>
+                    <p class="timeline-description">Leading AI research initiatives focused on responsible AI deployment
+                        and regulatory compliance.</p>
+                    <div class="timeline-projects">
+                        <div class="timeline-project">
+                            <h4>Financial NNI Classification Engine</h4>
+                            <p>Developing an advanced LLM-based classification system for financial and ESG news using
+                                LoRA fine-tuning, GRPO, and Log Probability-based confidence scoring. Implementing EU AI
+                                Act compliance documentation.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-header">
+                        <div><span class="timeline-role">Data Scientist</span> — <span class="timeline-company">Société
+                                Générale AIS</span></div>
+                        <span class="timeline-period">Mar 2024 – Feb 2025</span>
+                    </div>
+                    <div class="timeline-projects">
+                        <div class="timeline-project">
+                            <h4>GTPS – Guarantee Validation</h4>
+                            <p>Built automated document validation pipeline using LLMs for compliance assessment with
+                                URDG rules and GDPR. Explored PEFT methodologies (LoRA, QLoRA) for legal reasoning.</p>
+                        </div>
+                        <div class="timeline-project">
+                            <h4>Sustain AI</h4>
+                            <p>Designed on-premise RAG pipeline processing 1000+ financial documents. Reduced query
+                                latency from 1+ minute to 15 seconds with 96% accuracy using COLBERT, ColPali, and
+                                Qdrant.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-header">
+                        <div><span class="timeline-role">Big Data Engineer</span> — <span
+                                class="timeline-company">Société Générale</span></div>
+                        <span class="timeline-period">Jul 2021 – Feb 2024</span>
+                    </div>
+                    <div class="timeline-projects">
+                        <div class="timeline-project">
+                            <h4>AFMO – Document Intelligence Platform (Sceptre)</h4>
+                            <p>Built KYC document processing platform achieving 80x acceleration. Fine-tuned LayoutXLM,
+                                DiT, and YOLOv10 for multimodal document understanding. Optimized models with ONNX
+                                achieving 2-5x latency improvements.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <div class="section-header fade-in"><span class="section-label">Projects</span>
+                <h2 class="section-title">Featured Work</h2>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card featured fade-in">
+                    <div class="project-image">🖼️</div>
+                    <div class="project-content">
+                        <h3>Image Indexing & Retrieval with Qdrant</h3>
+                        <p>Efficient image indexing and retrieval system using ColPali, ColQwen, and VDR-2B-Multi-V1
+                            models. Enhances multimodal search capabilities across various domains with state-of-the-art
+                            vision-language models.</p>
+                        <div class="project-tech">
+                            <span>Python</span><span>Qdrant</span><span>ColPali</span><span>Transformers</span><span>Vector
+                                Search</span></div>
+                        <a href="https://github.com/pranshuchaurasia/image-indexing-and-retrival-with-qdrant"
+                            target="_blank" rel="noopener noreferrer" class="project-link"><svg
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                            </svg> View on GitHub</a>
+                    </div>
+                </div>
+                <div class="project-card fade-in">
+                    <div class="project-image">🤖</div>
+                    <div class="project-content">
+                        <h3>Customer Feedback Analysis (Azure AI)</h3>
+                        <p>RAG pipeline leveraging Azure OpenAI and AI Search for multi-channel feedback analysis. 86%
+                            accuracy in classification with hybrid semantic + keyword search.</p>
+                        <div class="project-tech"><span>Azure OpenAI</span><span>AI Search</span><span>Databricks</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card fade-in">
+                    <div class="project-image">🧠</div>
+                    <div class="project-content">
+                        <h3>Low-Cost Humanoid Head Design</h3>
+                        <p>Award-winning undergraduate thesis. Novel 3-servo eye mechanism with 71.76% volume reduction
+                            and 46.80% power savings. Published in IEEE CCWC 2023.</p>
+                        <div class="project-tech"><span>Robotics</span><span>Computer Vision</span><span>Jetson
+                                Nano</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="publications">
+        <div class="container">
+            <div class="section-header fade-in"><span class="section-label">Publications</span>
+                <h2 class="section-title">Research & Papers</h2>
+            </div>
+            <div class="publications-list">
+                <div class="publication-card fade-in">
+                    <span class="publication-venue">IEEE CCWC 2023</span>
+                    <h3 class="publication-title">Symbolic and Flat Affect Humanoid Head Design for Modular Humanoid
+                        Robots</h3>
+                    <p class="publication-authors">P. Chaurasia, R. A. Viji, A. P. Chavan, et al.</p>
+                    <p class="publication-abstract">Novel 3-servo eye mechanism achieving 71.76% volume reduction and
+                        46.80% power savings compared to traditional 6-servo designs. Developed two distinct humanoid
+                        heads with modular integration capabilities.</p>
+                    <div class="publication-links"><a href="https://ieeexplore.ieee.org/document/10099322"
+                            target="_blank" class="pub-link">📄 View Paper</a></div>
+                </div>
+                <div class="publication-card fade-in">
+                    <span class="publication-venue">IEEE ASIANCON 2021</span>
+                    <h3 class="publication-title">Design and Implementation of Automated Industrial Robots in Cylinder
+                        Liner Production Lines</h3>
+                    <p class="publication-authors">P. Chaurasia, R. Antony Viji, et al.</p>
+                    <p class="publication-abstract">Simulation of automated industrial robots demonstrating 73.42%
+                        improved efficiency and 34.78% reduction in manufacturing time compared to manual processes.</p>
+                    <div class="publication-links"><a href="https://ieeexplore.ieee.org/document/9544665"
+                            target="_blank" class="pub-link">📄 View Paper</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="skills">
         <div class="container">
-            <div class="section-header fade-in">
-                <span class="section-label">Skills</span>
+            <div class="section-header fade-in"><span class="section-label">Skills</span>
                 <h2 class="section-title">Tech Stack</h2>
-                <p class="section-subtitle">Technologies and tools I use to bring ideas to life</p>
             </div>
             <div class="skills-grid">
                 <div class="skill-card fade-in">
                     <div class="skill-icon">🐍</div>
                     <h3>Languages</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">SQL</span>
+                    <div class="skill-tags"><span class="skill-tag">Python</span><span class="skill-tag">SQL</span>
                     </div>
                 </div>
                 <div class="skill-card fade-in">
                     <div class="skill-icon">🤖</div>
                     <h3>NLP & LLMs</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">RAG Pipelines</span>
-                        <span class="skill-tag">Prompt Engineering</span>
-                        <span class="skill-tag">Fine-tuning</span>
-                        <span class="skill-tag">RLHF</span>
-                        <span class="skill-tag">LoRA</span>
-                    </div>
+                    <div class="skill-tags"><span class="skill-tag">RAG</span><span class="skill-tag">Prompt
+                            Engineering</span><span class="skill-tag">LoRA</span><span
+                            class="skill-tag">RLHF</span><span class="skill-tag">LLMOps</span></div>
                 </div>
                 <div class="skill-card fade-in">
                     <div class="skill-icon">🔥</div>
                     <h3>ML/AI Frameworks</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">PyTorch</span>
-                        <span class="skill-tag">TensorFlow</span>
-                        <span class="skill-tag">Scikit-learn</span>
-                        <span class="skill-tag">LangChain</span>
-                        <span class="skill-tag">LlamaIndex</span>
-                    </div>
+                    <div class="skill-tags"><span class="skill-tag">PyTorch</span><span
+                            class="skill-tag">TensorFlow</span><span class="skill-tag">LangChain</span><span
+                            class="skill-tag">LlamaIndex</span></div>
                 </div>
                 <div class="skill-card fade-in">
                     <div class="skill-icon">🔍</div>
                     <h3>Vector Databases</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Qdrant</span>
-                        <span class="skill-tag">Vespa</span>
-                        <span class="skill-tag">FAISS</span>
-                        <span class="skill-tag">PostgreSQL</span>
-                        <span class="skill-tag">MongoDB</span>
-                    </div>
+                    <div class="skill-tags"><span class="skill-tag">Qdrant</span><span
+                            class="skill-tag">Vespa</span><span class="skill-tag">FAISS</span><span
+                            class="skill-tag">PostgreSQL</span></div>
                 </div>
                 <div class="skill-card fade-in">
                     <div class="skill-icon">☁️</div>
                     <h3>Cloud & MLOps</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">AWS</span>
-                        <span class="skill-tag">Azure AI Studio</span>
-                        <span class="skill-tag">Azure Functions</span>
-                        <span class="skill-tag">Docker</span>
-                        <span class="skill-tag">Git</span>
-                    </div>
+                    <div class="skill-tags"><span class="skill-tag">AWS</span><span class="skill-tag">Azure AI
+                            Studio</span><span class="skill-tag">Docker</span><span class="skill-tag">Git</span></div>
                 </div>
                 <div class="skill-card fade-in">
                     <div class="skill-icon">👁️</div>
                     <h3>Computer Vision</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Document Layout Analysis</span>
-                        <span class="skill-tag">OCR</span>
-                        <span class="skill-tag">Object Detection</span>
-                        <span class="skill-tag">Vision Transformers</span>
-                    </div>
+                    <div class="skill-tags"><span class="skill-tag">Document Layout</span><span
+                            class="skill-tag">OCR</span><span class="skill-tag">ViT</span><span
+                            class="skill-tag">YOLOv10</span></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects">
-        <div class="container">
-            <div class="section-header fade-in">
-                <span class="section-label">Projects</span>
-                <h2 class="section-title">Featured Work</h2>
-                <p class="section-subtitle">A selection of projects I've worked on</p>
-            </div>
-            <div class="projects-grid">
-                <div class="project-card fade-in">
-                    <div class="project-image">🖼️</div>
-                    <div class="project-content">
-                        <h3>Image Indexing & Retrieval with Qdrant</h3>
-                        <p>Efficient image indexing and retrieval system using ColPali, ColQwen, and VDR-2B-Multi-V1 models. Enhances multimodal search capabilities across various domains.</p>
-                        <div class="project-tech">
-                            <span>Python</span>
-                            <span>Qdrant</span>
-                            <span>ColPali</span>
-                            <span>Transformers</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/pranshuchaurasia/image-indexing-and-retrival-with-qdrant" target="_blank" rel="noopener noreferrer" class="project-link">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                                View Code
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card fade-in">
-                    <div class="project-image">📊</div>
-                    <div class="project-content">
-                        <h3>Full Stack Data Science Bootcamp</h3>
-                        <p>Comprehensive notes and implementations from an intensive data science bootcamp covering end-to-end ML workflows and best practices.</p>
-                        <div class="project-tech">
-                            <span>Python</span>
-                            <span>Jupyter</span>
-                            <span>ML</span>
-                            <span>Statistics</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/pranshuchaurasia/iNeuron-Full-Stack-Data-Science-Bootcamp-Course-Notes" target="_blank" rel="noopener noreferrer" class="project-link">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                                View Code
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card fade-in">
-                    <div class="project-image">📈</div>
-                    <div class="project-content">
-                        <h3>Exploratory Data Analysis</h3>
-                        <p>Collection of EDA projects demonstrating data exploration, visualization techniques, and statistical analysis approaches.</p>
-                        <div class="project-tech">
-                            <span>Python</span>
-                            <span>Pandas</span>
-                            <span>Matplotlib</span>
-                            <span>Seaborn</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/pranshuchaurasia/EDA" target="_blank" rel="noopener noreferrer" class="project-link">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                                View Code
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
     <section id="contact">
         <div class="container">
             <div class="contact-wrapper fade-in">
                 <div class="contact-card">
                     <h3>Let's Connect</h3>
-                    <p>I'm always open to discussing new projects, opportunities, and collaborations in the AI/ML space.</p>
+                    <p>Open to discussing research opportunities, AI collaborations, and connecting with professionals
+                        in the LLM and Document AI space.</p>
+                    <p class="contact-email">📧 pclearning2022@gmail.com</p>
                     <div class="contact-links">
-                        <a href="https://github.com/pranshuchaurasia" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                            GitHub
-                        </a>
-                        <a href="https://linkedin.com/in/pranshuchaurasia" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                            LinkedIn
-                        </a>
+                        <a href="https://github.com/pranshuchaurasia" target="_blank" class="btn btn-secondary"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                            </svg> GitHub</a>
+                        <a href="https://linkedin.com/in/pranshuchaurasia" target="_blank" class="btn btn-primary"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path
+                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                            </svg> LinkedIn</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
             <p>© 2024 Pranshu Chaurasia. Built with <span class="heart">♥</span></p>
@@ -951,40 +1257,11 @@
     </footer>
 
     <script>
-        // Mobile menu toggle
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const navLinks = document.getElementById('navLinks');
-
-        mobileMenuBtn.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-
-        // Smooth scroll for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                navLinks.classList.remove('active');
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Fade in animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, observerOptions);
-
+        document.getElementById('mobileMenuBtn').addEventListener('click', () => document.getElementById('navLinks').classList.toggle('active'));
+        document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', function (e) { e.preventDefault(); document.getElementById('navLinks').classList.remove('active'); document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' }); }));
+        const observer = new IntersectionObserver(entries => entries.forEach(e => e.isIntersecting && e.target.classList.add('visible')), { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
         document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
     </script>
 </body>
+
 </html>
