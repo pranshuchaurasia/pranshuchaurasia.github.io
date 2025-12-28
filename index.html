@@ -622,8 +622,8 @@
         /* Skills */
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
         }
 
         .skill-card {
@@ -632,43 +632,73 @@
             border-radius: 16px;
             padding: 28px;
             transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .skill-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--gradient-1);
+            opacity: 0;
+            transition: opacity 0.3s ease;
         }
 
         .skill-card:hover {
             transform: translateY(-4px);
             border-color: var(--accent-primary);
+            box-shadow: 0 12px 40px rgba(99, 102, 241, 0.15);
         }
 
-        .skill-icon {
-            width: 48px;
-            height: 48px;
-            background: var(--gradient-1);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.25rem;
-            margin-bottom: 16px;
+        .skill-card:hover::before {
+            opacity: 1;
         }
 
         .skill-card h3 {
             font-size: 1.1rem;
-            margin-bottom: 12px;
+            margin-bottom: 16px;
+            color: var(--text-primary);
+            position: relative;
+            padding-left: 12px;
+        }
+
+        .skill-card h3::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 70%;
+            background: var(--gradient-1);
+            border-radius: 2px;
         }
 
         .skill-tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 6px;
+            gap: 8px;
         }
 
         .skill-tag {
-            padding: 4px 10px;
-            background: var(--bg-tertiary);
-            border-radius: 6px;
+            padding: 6px 14px;
+            background: rgba(99, 102, 241, 0.1);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            border-radius: 20px;
             font-size: 0.8rem;
-            color: var(--text-secondary);
+            color: var(--accent-secondary);
             font-family: 'JetBrains Mono', monospace;
+            transition: all 0.2s ease;
+        }
+
+        .skill-tag:hover {
+            background: rgba(99, 102, 241, 0.2);
+            border-color: var(--accent-primary);
+            transform: translateY(-2px);
         }
 
         /* Projects */
@@ -1042,10 +1072,6 @@
                         <div class="hero-stat-value">2</div>
                         <div class="hero-stat-label">IEEE Publications</div>
                     </div>
-                    <div class="hero-stat">
-                        <div class="hero-stat-value">5+</div>
-                        <div class="hero-stat-label">Production AI Systems</div>
-                    </div>
                 </div>
                 <div class="hero-cta">
                     <a href="#projects" class="btn btn-primary">View My Work <svg xmlns="http://www.w3.org/2000/svg"
@@ -1104,8 +1130,9 @@
                 <div class="timeline-item current fade-in">
                     <div class="timeline-dot"></div>
                     <div class="timeline-header">
-                        <div><span class="timeline-role">Data Scientist</span> — <span class="timeline-company">SocGen
-                                AI</span></div>
+                        <div><span class="timeline-role">Data Scientist – Responsible and Applied AI Research</span> —
+                            <span class="timeline-company">SocGen AI</span>
+                        </div>
                         <span class="timeline-period">Feb 2025 – Present</span>
                     </div>
                     <p class="timeline-description">Part of SocGen AI, a dedicated entity within the Group focused on
@@ -1116,9 +1143,9 @@
                 <div class="timeline-item fade-in">
                     <div class="timeline-dot"></div>
                     <div class="timeline-header">
-                        <div><span class="timeline-role">Data Scientist</span> — <span class="timeline-company">Société
-                                Générale AIS</span></div>
-                        <span class="timeline-period">Mar 2024 – Feb 2025</span>
+                        <div><span class="timeline-role">Data Scientist – AIS</span> — <span
+                                class="timeline-company">Société Générale</span></div>
+                        <span class="timeline-period">2023 – 2025</span>
                     </div>
                     <p class="timeline-description">Built end-to-end Document Intelligence solutions including automated
                         document validation pipelines, on-premise RAG systems for financial documents, and LLM-based
@@ -1129,7 +1156,15 @@
                     <div class="timeline-header">
                         <div><span class="timeline-role">Big Data Engineer</span> — <span
                                 class="timeline-company">Société Générale</span></div>
-                        <span class="timeline-period">Jul 2021 – Feb 2024</span>
+                        <span class="timeline-period">2021 – 2023</span>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-header">
+                        <div><span class="timeline-role">MATLAB Intern</span> — <span class="timeline-company">PANTECH
+                                SOLUTIONS Pvt. Ltd.</span></div>
+                        <span class="timeline-period">Sep 2020</span>
                     </div>
                 </div>
             </div>
@@ -1222,44 +1257,51 @@
             </div>
             <div class="skills-grid">
                 <div class="skill-card fade-in">
-                    <div class="skill-icon">🐍</div>
                     <h3>Languages</h3>
                     <div class="skill-tags"><span class="skill-tag">Python</span><span class="skill-tag">SQL</span>
                     </div>
                 </div>
                 <div class="skill-card fade-in">
-                    <div class="skill-icon">🤖</div>
-                    <h3>NLP & LLMs</h3>
-                    <div class="skill-tags"><span class="skill-tag">RAG</span><span class="skill-tag">Prompt
-                            Engineering</span><span class="skill-tag">LoRA</span><span
-                            class="skill-tag">RLHF</span><span class="skill-tag">LLMOps</span></div>
+                    <h3>NLP / Generative AI</h3>
+                    <div class="skill-tags"><span class="skill-tag">RAG Pipelines</span><span
+                            class="skill-tag">LLMs</span><span class="skill-tag">Prompt Engineering</span><span
+                            class="skill-tag">Fine-tuning (PEFT, LoRA, GRPO)</span><span
+                            class="skill-tag">Unsloth</span></div>
                 </div>
                 <div class="skill-card fade-in">
-                    <div class="skill-icon">🔥</div>
-                    <h3>ML/AI Frameworks</h3>
+                    <h3>Frameworks & Libraries</h3>
                     <div class="skill-tags"><span class="skill-tag">PyTorch</span><span
-                            class="skill-tag">TensorFlow</span><span class="skill-tag">LangChain</span><span
-                            class="skill-tag">LlamaIndex</span></div>
+                            class="skill-tag">Kedro</span><span class="skill-tag">LangChain</span><span
+                            class="skill-tag">LlamaIndex</span><span class="skill-tag">LangGraph</span></div>
                 </div>
                 <div class="skill-card fade-in">
-                    <div class="skill-icon">🔍</div>
-                    <h3>Vector Databases</h3>
-                    <div class="skill-tags"><span class="skill-tag">Qdrant</span><span
-                            class="skill-tag">Vespa</span><span class="skill-tag">FAISS</span><span
-                            class="skill-tag">PostgreSQL</span></div>
-                </div>
-                <div class="skill-card fade-in">
-                    <div class="skill-icon">☁️</div>
-                    <h3>Cloud & MLOps</h3>
-                    <div class="skill-tags"><span class="skill-tag">AWS</span><span class="skill-tag">Azure AI
-                            Studio</span><span class="skill-tag">Docker</span><span class="skill-tag">Git</span></div>
-                </div>
-                <div class="skill-card fade-in">
-                    <div class="skill-icon">👁️</div>
                     <h3>Computer Vision</h3>
-                    <div class="skill-tags"><span class="skill-tag">Document Layout</span><span
-                            class="skill-tag">OCR</span><span class="skill-tag">ViT</span><span
-                            class="skill-tag">YOLOv10</span></div>
+                    <div class="skill-tags"><span class="skill-tag">Document Layout Analysis</span><span
+                            class="skill-tag">OCR</span><span class="skill-tag">Object Detection</span><span
+                            class="skill-tag">Vision Transformers</span><span class="skill-tag">CNN</span></div>
+                </div>
+                <div class="skill-card fade-in">
+                    <h3>Cloud & MLOps</h3>
+                    <div class="skill-tags"><span class="skill-tag">Azure AI Studio</span><span
+                            class="skill-tag">Docker</span><span class="skill-tag">Git</span></div>
+                </div>
+                <div class="skill-card fade-in">
+                    <h3>Databases</h3>
+                    <div class="skill-tags"><span class="skill-tag">Qdrant</span><span
+                            class="skill-tag">Weaviate</span><span class="skill-tag">FAISS</span><span
+                            class="skill-tag">PostgreSQL</span><span class="skill-tag">MongoDB</span></div>
+                </div>
+                <div class="skill-card fade-in">
+                    <h3>AI Evaluation & Safety</h3>
+                    <div class="skill-tags"><span class="skill-tag">G-Eval</span><span class="skill-tag">Adversarial
+                            Testing</span><span class="skill-tag">Hallucination Detection</span><span
+                            class="skill-tag">MRM</span><span class="skill-tag">EU AI Act Compliance</span></div>
+                </div>
+                <div class="skill-card fade-in">
+                    <h3>Core Skills</h3>
+                    <div class="skill-tags"><span class="skill-tag">Statistics</span><span class="skill-tag">Scientific
+                            Research</span><span class="skill-tag">RLHF</span><span class="skill-tag">Supervised
+                            Learning</span><span class="skill-tag">Unsupervised Learning</span></div>
                 </div>
             </div>
         </div>
