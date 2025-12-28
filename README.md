@@ -1,8 +1,6 @@
-# Pranshu Chaurasia | Portfolio
+# Pranshu Chaurasia
 
 [![Website](https://img.shields.io/badge/Website-pranshuchaurasia.github.io-6366f1?style=for-the-badge&logo=google-chrome&logoColor=white)](https://pranshuchaurasia.github.io) [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/pranshuchaurasia) [![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/pranshuchaurasia)
-
-> **Data Scientist | Responsible & Applied AI Research @ SocGen AI**
 
 Personal portfolio website showcasing my work in Generative AI, Document Intelligence, and AI Evaluation systems.
 
@@ -10,13 +8,15 @@ Personal portfolio website showcasing my work in Generative AI, Document Intelli
 
 ## About
 
-I'm a Data Scientist specializing in **LLM fine-tuning**, **RAG pipeline development**, and **AI evaluation frameworks**. With 4+ years of experience, I design and deploy production-grade AI systems for enterprise applications in banking and finance.
+A personal portfolio website built with vanilla HTML, CSS, and JavaScript. The site features a modern dark theme with animated gradients, smooth scroll effects, and responsive design optimized for all devices.
 
-### Core Expertise
-- **Generative AI** — LLM fine-tuning, prompt engineering, multi-agent workflows
-- **Document Intelligence** — Layout analysis, OCR, information extraction
-- **AI Evaluation & Safety** — Custom metrics, hallucination detection, EU AI Act compliance
-- **RAG Systems** — Enterprise retrieval pipelines, vector databases, hybrid search
+### Sections
+- **Hero** — Introduction with animated gradient text and stats
+- **About** — Background and expertise highlights
+- **Experience** — Work timeline with role descriptions
+- **Projects** — Featured research and publications
+- **Skills** — Technical skills organized by category
+- **Contact** — Social links and connection info
 
 ---
 
@@ -75,5 +75,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 <p align="center">
   <strong>© 2025 Pranshu Chaurasia</strong><br>
-  <sub>Built for AI Research</sub>
 </p>
