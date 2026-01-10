@@ -11,10 +11,12 @@ Personal portfolio website showcasing my work in Generative AI, Document Intelli
 A personal portfolio website built with vanilla HTML, CSS, and JavaScript. The site features a modern dark theme with animated gradients, smooth scroll effects, and responsive design optimized for all devices.
 
 ### Sections
-- **Hero** — Introduction with animated gradient text and stats
+- **Hero** — Introduction with animated gradient text
 - **About** — Background and expertise highlights
 - **Experience** — Work timeline with role descriptions
 - **Projects** — Featured research and publications
+- **Publications** — IEEE papers and research work
+- **Articles** — Blog posts (Coming Soon)
 - **Skills** — Technical skills organized by category
 - **Contact** — Social links and connection info
 
@@ -44,12 +46,27 @@ HTML5 • CSS3 • JavaScript (ES6+) • GitHub Pages
 
 ```
 pranshuchaurasia.github.io/
-├── index.html          # Main portfolio page (single-file architecture)
-├── assets/
-│   └── images/         # Profile and project images
-├── README.md           # Documentation
-└── LICENSE             # MIT License
+├── index.html              # Main portfolio page
+├── articles/               # Blog articles section
+│   ├── index.html          # Articles listing (Coming Soon)
+│   └── README.md           # Articles documentation
+├── assets/                 # Static assets
+│   ├── css/                # Stylesheets (future use)
+│   ├── js/                 # JavaScript files (future use)
+│   ├── images/             # Image assets
+│   │   ├── profile.jpg     # Profile photo
+│   │   └── articles/       # Article-specific images
+│   └── README.md           # Assets documentation
+├── README.md               # This file
+└── LICENSE                 # MIT License
 ```
+
+### Adding New Articles
+
+1. Create a folder in `articles/` with the article slug
+2. Add `index.html` with article content
+3. Update `articles/index.html` to include the new article
+4. See `articles/README.md` for detailed instructions
 
 ---
 
