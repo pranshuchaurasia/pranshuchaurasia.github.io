@@ -26,9 +26,9 @@ A personal portfolio website built with vanilla HTML, CSS, and JavaScript. The s
 
 | Feature | Description |
 |---------|-------------|
-| **Dark Theme** | Modern dark mode with purple/indigo gradient accents |
+| **Dark/Light Mode** | Toggle between dark and light themes with localStorage persistence |
 | **Responsive** | Optimized for desktop, tablet, and mobile devices |
-| **Performance** | Lightweight single-file architecture for fast loading |
+| **Modular CSS** | Shared styles in `assets/css/styles.css` for maintainability |
 | **Animations** | Smooth scroll animations and interactive hover effects |
 | **No Dependencies** | Built with vanilla HTML, CSS, and JavaScript |
 
@@ -51,8 +51,11 @@ pranshuchaurasia.github.io/
 │   ├── index.html          # Articles listing (Coming Soon)
 │   └── README.md           # Articles documentation
 ├── assets/                 # Static assets
-│   ├── css/                # Stylesheets (future use)
+│   ├── css/                # Stylesheets
+│   │   ├── styles.css      # Shared styles (theme, nav, components)
+│   │   └── README.md       # CSS documentation
 │   ├── js/                 # JavaScript files (future use)
+│   │   └── README.md       # JS documentation
 │   ├── images/             # Image assets
 │   │   ├── profile.jpg     # Profile photo
 │   │   └── articles/       # Article-specific images

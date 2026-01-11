@@ -17,15 +17,17 @@ assets/
 
 ## CSS Architecture
 
-The website uses a **modular CSS approach**:
+The website uses a **modular CSS approach** with light/dark mode support:
 
 - **`css/styles.css`** – Shared base styles used across all pages
-  - CSS variables (design tokens)
+  - CSS variables with dark (default) and light theme variants
+  - Theme toggle button styling
   - Navigation, buttons, typography
   - Background effects, animations
   - Responsive breakpoints
 
 - **Inline `<style>` blocks** – Page-specific styles in each HTML file
+  - Light mode overrides for specific components (e.g., contact card)
 
 ### Linking the Shared CSS
 

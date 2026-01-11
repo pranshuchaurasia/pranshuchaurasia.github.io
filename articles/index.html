@@ -182,8 +182,12 @@
         const themeToggle = document.getElementById('themeToggle');
         const html = document.documentElement;
 
+        // Safe localStorage wrapper for browsers with privacy restrictions (Brave)
+        const getTheme = () => { try { return localStorage.getItem('theme'); } catch (e) { return null; } };
+        const setTheme = (val) => { try { localStorage.setItem('theme', val); } catch (e) { } };
+
         // Check for saved theme preference or default to dark
-        const savedTheme = localStorage.getItem('theme') || 'dark';
+        const savedTheme = getTheme() || 'dark';
         if (savedTheme === 'light') {
             html.setAttribute('data-theme', 'light');
         }
@@ -193,7 +197,7 @@
             const newTheme = currentTheme === 'light' ? 'dark' : 'light';
             if (newTheme === 'dark') html.removeAttribute('data-theme');
             else html.setAttribute('data-theme', 'light');
-            localStorage.setItem('theme', newTheme);
+            setTheme(newTheme);
         });
 
         // Mobile menu toggle

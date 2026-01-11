@@ -6,23 +6,44 @@ Shared stylesheets for the portfolio website.
 
 | File | Description |
 |------|-------------|
-| `styles.css` | Shared base styles for all pages |
+| `styles.css` | Shared base styles with light/dark mode support |
 
 ## styles.css Structure
 
 The shared stylesheet is organized into documented sections:
 
-1. **CSS Variables** – Design tokens (colors, gradients)
-2. **Reset & Base** – Box-sizing, html/body defaults
-3. **Typography** – Font families, gradient text
-4. **Layout** – Container, section padding
-5. **Background Effects** – Grid pattern, glow orbs
-6. **Navigation** – Fixed nav, mobile menu
-7. **Buttons & Links** – Primary, secondary, back-link
-8. **Cards & Components** – Section headers, cards
-9. **Badges & Tags** – Status badges, skill tags
-10. **Animations** – Keyframes for effects
-11. **Responsive** – Mobile breakpoints
+1. **CSS Variables** – Design tokens with dark (default) and light theme variants
+2. **Theme Toggle** – Styling for the light/dark mode toggle button
+3. **Reset & Base** – Box-sizing, html/body defaults
+4. **Typography** – Font families, gradient text
+5. **Layout** – Container, section padding
+6. **Background Effects** – Grid pattern, glow orbs (theme-aware opacity)
+7. **Navigation** – Fixed nav with theme-aware background
+8. **Buttons & Links** – Primary, secondary, back-link
+9. **Cards & Components** – Section headers, cards
+10. **Badges & Tags** – Status badges, skill tags
+11. **Animations** – Keyframes for effects
+12. **Responsive** – Mobile breakpoints
+
+## Light/Dark Mode
+
+The theme is controlled via `data-theme` attribute on `<html>`:
+- **Dark mode (default)**: No attribute or empty value
+- **Light mode**: `data-theme="light"`
+
+```css
+/* Dark theme variables in :root */
+:root {
+    --bg-primary: #0a0a0f;
+    /* ... */
+}
+
+/* Light theme overrides */
+[data-theme="light"] {
+    --bg-primary: #faf9f7;
+    /* ... */
+}
+```
 
 ## Usage
 
