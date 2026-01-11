@@ -27,29 +27,114 @@
    1. CSS VARIABLES (Design Tokens)
    ========================================================================== */
 
+/* Dark Theme (Default) */
 :root {
     /* Background Colors */
     --bg-primary: #0a0a0f;
     --bg-secondary: #12121a;
     --bg-tertiary: #1a1a25;
-    
+
     /* Accent Colors */
     --accent-primary: #6366f1;
     --accent-secondary: #818cf8;
     --accent-glow: rgba(99, 102, 241, 0.3);
-    
+
     /* Text Colors */
     --text-primary: #f1f5f9;
     --text-secondary: #94a3b8;
     --text-muted: #64748b;
-    
+
     /* Border & Effects */
     --border-color: rgba(255, 255, 255, 0.08);
     --gradient-1: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #d946ef 100%);
     --gradient-2: linear-gradient(135deg, #0ea5e9 0%, #6366f1 100%);
-    
+
     /* Status Colors */
     --success: #22c55e;
+
+    /* Nav background */
+    --nav-bg: rgba(10, 10, 15, 0.8);
+
+    /* Grid opacity */
+    --grid-opacity: 0.03;
+    --orb-opacity: 0.15;
+}
+
+/* Light Theme - Soft, warm tones */
+[data-theme="light"] {
+    /* Background Colors - softer off-whites */
+    --bg-primary: #faf9f7;
+    --bg-secondary: #f5f4f2;
+    --bg-tertiary: #efeee9;
+
+    /* Text Colors */
+    --text-primary: #1a1a2e;
+    --text-secondary: #4a4a5a;
+    --text-muted: #6b6b7a;
+
+    /* Border & Effects */
+    --border-color: rgba(0, 0, 0, 0.1);
+    --accent-glow: rgba(99, 102, 241, 0.2);
+
+    /* Nav background - slight warmth */
+    --nav-bg: rgba(250, 249, 247, 0.95);
+
+    /* Grid and orbs - subtle */
+    --grid-opacity: 0.04;
+    --orb-opacity: 0.06;
+}
+
+/* ==========================================================================
+   THEME TOGGLE BUTTON
+   ========================================================================== */
+
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: var(--text-secondary);
+    margin-left: 16px;
+}
+
+.theme-toggle:hover {
+    background: var(--accent-primary);
+    border-color: var(--accent-primary);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.theme-toggle svg {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease;
+}
+
+.theme-toggle:hover svg {
+    transform: rotate(15deg);
+}
+
+/* Hide appropriate icon based on theme */
+.theme-toggle .sun-icon {
+    display: none;
+}
+
+.theme-toggle .moon-icon {
+    display: block;
+}
+
+[data-theme="light"] .theme-toggle .sun-icon {
+    display: block;
+}
+
+[data-theme="light"] .theme-toggle .moon-icon {
+    display: none;
 }
 
 
@@ -80,7 +165,12 @@ body {
    3. TYPOGRAPHY
    ========================================================================== */
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'JetBrains Mono', monospace;
 }
 
@@ -106,7 +196,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 section {
-    padding: 100px 0;
+    padding: 80px 0;
 }
 
 
@@ -124,8 +214,8 @@ section {
     pointer-events: none;
     z-index: -2;
     background-image:
-        linear-gradient(rgba(99, 102, 241, 0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(99, 102, 241, 0.03) 1px, transparent 1px);
+        linear-gradient(rgba(99, 102, 241, var(--grid-opacity)) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(99, 102, 241, var(--grid-opacity)) 1px, transparent 1px);
     background-size: 60px 60px;
     mask-image: radial-gradient(ellipse at center, black 0%, transparent 70%);
     -webkit-mask-image: radial-gradient(ellipse at center, black 0%, transparent 70%);
@@ -151,7 +241,7 @@ section {
     height: 600px;
     border-radius: 50%;
     filter: blur(120px);
-    opacity: 0.15;
+    opacity: var(--orb-opacity);
     pointer-events: none;
     z-index: -1;
     animation: floatOrb 20s ease-in-out infinite;
@@ -183,7 +273,7 @@ nav {
     right: 0;
     z-index: 100;
     padding: 20px 0;
-    background: rgba(10, 10, 15, 0.8);
+    background: var(--nav-bg);
     backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--border-color);
     transition: all 0.3s ease;
@@ -209,7 +299,8 @@ nav .container {
 }
 
 .logo:hover {
-    color: #00ff41; /* Matrix green */
+    color: #00ff41;
+    /* Matrix green */
 }
 
 .logo:hover .terminal-cursor {
@@ -448,17 +539,33 @@ nav .container {
    ========================================================================== */
 
 @keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
 }
 
 @keyframes pulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.5; }
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
 }
 
 @keyframes shimmer {
-    to { background-position: 200% center; }
+    to {
+        background-position: 200% center;
+    }
 }
 
 @keyframes fadeInUp {
@@ -466,6 +573,7 @@ nav .container {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -473,10 +581,23 @@ nav .container {
 }
 
 @keyframes floatOrb {
-    0%, 100% { transform: translate(0, 0) scale(1); }
-    25% { transform: translate(50px, 30px) scale(1.1); }
-    50% { transform: translate(-30px, 50px) scale(0.95); }
-    75% { transform: translate(30px, -20px) scale(1.05); }
+
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    25% {
+        transform: translate(50px, 30px) scale(1.1);
+    }
+
+    50% {
+        transform: translate(-30px, 50px) scale(0.95);
+    }
+
+    75% {
+        transform: translate(30px, -20px) scale(1.05);
+    }
 }
 
 /* Fade-in animation class */
@@ -497,6 +618,7 @@ nav .container {
    ========================================================================== */
 
 @media (max-width: 768px) {
+
     /* Mobile navigation */
     .nav-links {
         display: none;
