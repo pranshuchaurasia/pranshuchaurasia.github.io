@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Articles | Pranshu Chaurasia</title>
     <meta name="description"
-        content="Articles and blog posts by Pranshu Chaurasia on Agents, Multimodal LLM, and Generative AI.">
+        content="Writing and articles by Pranshu Chaurasia.">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:wght@500;600;700&display=swap"
         rel="stylesheet">
 
     <!-- Shared Styles -->
@@ -34,19 +34,64 @@
             text-align: center;
         }
 
+        body {
+            background:
+                radial-gradient(circle at 88% 8%, rgba(120, 214, 189, 0.07), transparent 28rem),
+                radial-gradient(circle at 4% 70%, rgba(255, 128, 93, 0.08), transparent 32rem),
+                var(--bg-primary);
+        }
+
+        nav .container {
+            min-height: 62px;
+            background: rgba(18, 19, 22, 0.94);
+            border-radius: 14px;
+        }
+
+        [data-theme="light"] nav .container {
+            background: rgba(255, 250, 242, 0.94);
+        }
+
+        .logo {
+            gap: 10px;
+            font-family: 'IBM Plex Sans', sans-serif;
+        }
+
+        .logo-mark {
+            display: grid;
+            width: 42px;
+            height: 42px;
+            place-items: center;
+            color: #17120f;
+            background: linear-gradient(145deg, var(--accent-primary), var(--accent-secondary));
+            border-radius: 50%;
+            box-shadow: 0 7px 18px rgba(255, 128, 93, 0.2);
+        }
+
+        .logo-mark img {
+            width: 36px;
+            height: 36px;
+            display: block;
+        }
+
+        .nav-links a {
+            padding: 9px 10px;
+            border-radius: 8px;
+            font-family: 'IBM Plex Sans', sans-serif;
+            font-size: 0.78rem;
+        }
+
         .coming-soon-badge {
             display: inline-flex;
             align-items: center;
             gap: 12px;
             padding: 8px 16px;
-            background: rgba(99, 102, 241, 0.1);
-            border: 1px solid var(--accent-primary);
-            border-radius: 4px;
+            background: rgba(255, 128, 93, 0.08);
+            border: 1px solid var(--border-strong);
+            border-radius: 10px;
             font-size: 0.85rem;
             color: var(--accent-primary);
             margin-bottom: 24px;
-            font-family: 'JetBrains Mono', monospace;
-            box-shadow: 0 0 15px rgba(99, 102, 241, 0.2);
+            font-family: 'IBM Plex Mono', monospace;
             animation: fadeInUp 0.6s ease;
         }
 
@@ -60,8 +105,12 @@
         }
 
         .page-title {
-            font-size: clamp(2.5rem, 6vw, 4rem);
-            font-weight: 700;
+            max-width: 720px;
+            font-family: 'IBM Plex Serif', Georgia, serif;
+            font-size: clamp(3.5rem, 8vw, 6.8rem);
+            font-weight: 500;
+            line-height: 0.95;
+            letter-spacing: -0.06em;
             margin-bottom: 16px;
             animation: fadeInUp 0.6s ease 0.1s backwards;
         }
@@ -92,9 +141,21 @@
 
         /* Responsive */
         @media (max-width: 768px) {
-            .page-title {
-                font-size: 2rem;
+            .logo-name {
+                display: none;
             }
+
+            .page-title {
+                font-size: clamp(3.2rem, 17vw, 5rem);
+            }
+        }
+
+        .page-title .gradient-text {
+            background: linear-gradient(110deg, var(--text-primary), var(--accent-primary) 62%, var(--accent-secondary));
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: none;
         }
     </style>
 </head>
@@ -109,17 +170,15 @@
     <!-- Navigation -->
     <nav>
         <div class="container">
-            <a href="../index.html" class="logo">
-                <span class="terminal-text">pranshu@ai:~$</span>
-                <span class="terminal-cursor"></span>
-            </a>
+            <a href="../index.html" class="logo"><span class="logo-mark" aria-hidden="true"><img
+                        src="../assets/images/smith-chart-mark.svg" alt=""></span><span class="logo-name">Pranshu
+                    Chaurasia</span></a>
             <ul class="nav-links" id="navLinks">
-                <li><a href="../index.html#about">About</a></li>
-                <li><a href="../index.html#experience">Experience</a></li>
-                <li><a href="../index.html#projects">Projects</a></li>
-                <li><a href="../index.html#publications">Publications</a></li>
+                <li><a href="../index.html#experience">Journey</a></li>
+                <li><a href="../index.html#projects">Work</a></li>
+                <li><a href="../index.html#publications">Research</a></li>
+                <li><a href="../index.html#skills">Toolbox</a></li>
                 <li><a href="index.html" class="active">Articles</a></li>
-                <li><a href="../index.html#skills">Skills</a></li>
                 <li><a href="../index.html#contact">Contact</a></li>
             </ul>
             <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
@@ -151,13 +210,13 @@
     <!-- Main Content -->
     <main class="page-content">
         <div class="coming-soon-badge">
-            <span class="dot"></span>Under Construction
+            <span class="dot"></span>Writing in progress
         </div>
         <h1 class="page-title">
             <span class="gradient-text">Articles</span>
         </h1>
         <p class="page-description">
-            Coming Soon... I'm working on sharing insights about Agents, Multimodal LLM, and Generative AI.
+            I am preparing the first set of articles. They will be published here.
         </p>
         <a href="../index.html" class="back-link">
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
@@ -172,7 +231,7 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>© 2025 Pranshu Chaurasia</p>
+            <p>© 2026 Pranshu Chaurasia</p>
         </div>
     </footer>
 

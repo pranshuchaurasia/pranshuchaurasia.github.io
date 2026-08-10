@@ -1,24 +1,22 @@
 # Pranshu Chaurasia
 
-[![Website](https://img.shields.io/badge/Website-pranshuchaurasia.github.io-6366f1?style=for-the-badge&logo=google-chrome&logoColor=white)](https://pranshuchaurasia.github.io) [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/pranshuchaurasia) [![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/pranshuchaurasia)
+[![Website](https://img.shields.io/badge/Website-pranshuchaurasia.github.io-ff805d?style=for-the-badge&logo=google-chrome&logoColor=white)](https://pranshuchaurasia.github.io) [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/pranshuchaurasia) [![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/pranshuchaurasia)
 
-Personal portfolio of Pranshu Chaurasia, an AI researcher and Master's student in AI and Language at Stockholm University. The site covers my education, experience, projects, publications, and technical work across Generative AI, NLP, computer vision, document intelligence, knowledge graphs, and AI evaluation.
+Personal portfolio of Pranshu Chaurasia, a Master's student in AI and Language at Stockholm University with five years of experience developing and deploying LLM pipelines, document intelligence workflows, and AI evaluation frameworks. The site covers my education, experience, projects, publications, and technical work across LLM fine-tuning, RAG, multi-agent workflows, AI evaluation, document intelligence, data lineage, knowledge graphs, ontology, and responsible AI governance.
 
 ---
 
 ## About
 
-A personal portfolio website built with HTML, CSS, and JavaScript. It includes dark and light themes, responsive layouts, animated gradients, and smooth scrolling.
+A personal portfolio website built with HTML, CSS, and JavaScript. It uses an editorial layout, warm dark and light themes, responsive components, and focused interactions to present my academic and professional journey.
 
 ### Sections
-- **Hero:** Current academic status and introduction
-- **About:** Background and technical focus areas
-- **Experience:** Academic and professional timeline
-- **Education:** Master's and undergraduate education
-- **Projects:** Featured research and publications
+- **Introduction:** Current academic status, portrait, background, and technical focus
+- **Journey:** Education and professional experience in one chronological view
+- **Selected Work:** Multimodal retrieval, robotics, and computer vision projects
 - **Publications:** Accepted 2026 papers, forthcoming preprints, and IEEE papers
-- **Articles:** Blog posts (Coming Soon)
-- **Skills:** Technical skills organized by category
+- **Technical Expertise:** Technical skills organized by category
+- **Articles:** Writing section in progress
 - **Contact:** Social links and connection info
 
 ---
@@ -62,9 +60,10 @@ A personal portfolio website built with HTML, CSS, and JavaScript. It includes d
 | Feature | Description |
 |---------|-------------|
 | **Dark/Light Mode** | Toggle between dark and light themes with localStorage persistence |
-| **Responsive** | Optimized for desktop, tablet, and mobile devices |
-| **Modular CSS** | Shared styles in `assets/css/styles.css` for maintainability |
-| **Animations** | Smooth scroll animations and interactive hover effects |
+| **Responsive** | Purpose-built layouts for desktop, tablet, and mobile devices |
+| **Personal Narrative** | Introduction, career, education, work, and research presented as connected chapters |
+| **Interactive Research Shelf** | Keyboard-accessible controls and touch scrolling for publications |
+| **Accessible Motion** | Focus states and reduced-motion support alongside subtle reveal and hover effects |
 | **No Framework Dependencies** | Built with HTML, CSS, and JavaScript |
 
 ---

@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <clipPath id="smith-clip">
+      <circle cx="32" cy="32" r="26"/>
+    </clipPath>
+  </defs>
+  <circle cx="32" cy="32" r="26" stroke="#211610" stroke-width="1.8"/>
+  <path d="M6 32H58" stroke="#211610" stroke-width="1.35"/>
+  <g clip-path="url(#smith-clip)" stroke="#211610" fill="none">
+    <g opacity=".84" stroke-width=".75">
+      <circle cx="34.36" cy="32" r="23.64"/>
+      <circle cx="36.33" cy="32" r="21.67"/>
+      <circle cx="38" cy="32" r="20"/>
+      <circle cx="40.67" cy="32" r="17.33"/>
+      <circle cx="45" cy="32" r="13"/>
+      <circle cx="47.6" cy="32" r="10.4"/>
+      <circle cx="49.33" cy="32" r="8.67"/>
+      <circle cx="51.5" cy="32" r="6.5"/>
+      <circle cx="53.67" cy="32" r="4.33"/>
+    </g>
+    <g opacity=".7" stroke-width=".65">
+      <circle cx="58" cy="162" r="130"/>
+      <circle cx="58" cy="136" r="104"/>
+      <circle cx="58" cy="97" r="65"/>
+      <circle cx="58" cy="84" r="52"/>
+      <circle cx="58" cy="66.67" r="34.67"/>
+      <circle cx="58" cy="58" r="26"/>
+      <circle cx="58" cy="49.33" r="17.33"/>
+      <circle cx="58" cy="45" r="13"/>
+      <circle cx="58" cy="40.67" r="8.67"/>
+      <circle cx="58" cy="37.2" r="5.2"/>
+      <circle cx="58" cy="-98" r="130"/>
+      <circle cx="58" cy="-72" r="104"/>
+      <circle cx="58" cy="-33" r="65"/>
+      <circle cx="58" cy="-20" r="52"/>
+      <circle cx="58" cy="-2.67" r="34.67"/>
+      <circle cx="58" cy="6" r="26"/>
+      <circle cx="58" cy="14.67" r="17.33"/>
+      <circle cx="58" cy="19" r="13"/>
+      <circle cx="58" cy="23.33" r="8.67"/>
+      <circle cx="58" cy="26.8" r="5.2"/>
+    </g>
+  </g>
+  <g fill="#211610">
+    <circle cx="6" cy="32" r="1.1"/>
+    <circle cx="32" cy="32" r="1.25"/>
+    <circle cx="58" cy="32" r="1.35"/>
+  </g>
+</svg>
